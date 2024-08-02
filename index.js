@@ -116,6 +116,8 @@ passport.deserializeUser(function (user, cb) {
   });
 });
 
+main().catch((err) => console.log(err));
+
 // Payments  4000 0035 6000 0008 for the india visa card
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
